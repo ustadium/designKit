@@ -10,7 +10,6 @@
 		6BF5E9D22ED50E47005966A9 /* UDS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BF5E9C62ED50E47005966A9 /* UDS.framework */; };
 		6BF5E9E32ED50E63005966A9 /* UDS.docc in Sources */ = {isa = PBXBuildFile; fileRef = 6BF5E9E02ED50E63005966A9 /* UDS.docc */; };
 		6BF5E9E42ED50E63005966A9 /* UDS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF5E9E12ED50E63005966A9 /* UDS.swift */; };
-		6BF5E9E72ED50E66005966A9 /* UDSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF5E9E52ED50E66005966A9 /* UDSTests.swift */; };
 		6BF5E9FB2ED50F16005966A9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF5E9F82ED50F16005966A9 /* ContentView.swift */; };
 		6BF5E9FC2ED50F16005966A9 /* UDSPlaygroundApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF5E9F92ED50F16005966A9 /* UDSPlaygroundApp.swift */; };
 		6BF5E9FD2ED50F16005966A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BF5E9F72ED50F16005966A9 /* Assets.xcassets */; };
@@ -36,7 +35,6 @@
 		6BF5E9D12ED50E47005966A9 /* UDSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UDSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BF5E9E02ED50E63005966A9 /* UDS.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = UDS.docc; sourceTree = "<group>"; };
 		6BF5E9E12ED50E63005966A9 /* UDS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UDS.swift; sourceTree = "<group>"; };
-		6BF5E9E52ED50E66005966A9 /* UDSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UDSTests.swift; sourceTree = "<group>"; };
 		6BF5E9EC2ED50F0E005966A9 /* UDSPlayground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UDSPlayground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BF5E9F72ED50F16005966A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6BF5E9F82ED50F16005966A9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -78,7 +76,6 @@
 			isa = PBXGroup;
 			children = (
 				6BF5E9E22ED50E63005966A9 /* UDS */,
-				6BF5E9E62ED50E66005966A9 /* UDSTests */,
 				6BF5E9FA2ED50F16005966A9 /* UDSPlayground */,
 				6BF5E9C72ED50E47005966A9 /* Products */,
 			);
@@ -106,14 +103,6 @@
 				6BF5E9E12ED50E63005966A9 /* UDS.swift */,
 			);
 			path = UDS;
-			sourceTree = "<group>";
-		};
-		6BF5E9E62ED50E66005966A9 /* UDSTests */ = {
-			isa = PBXGroup;
-			children = (
-				6BF5E9E52ED50E66005966A9 /* UDSTests.swift */,
-			);
-			path = UDSTests;
 			sourceTree = "<group>";
 		};
 		6BF5E9FA2ED50F16005966A9 /* UDSPlayground */ = {
@@ -284,7 +273,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6BF5E9E72ED50E66005966A9 /* UDSTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

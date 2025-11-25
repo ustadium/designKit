@@ -13,6 +13,17 @@
 		6BA89B4D2ED526E3005428CC /* UButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA89B472ED526E3005428CC /* UButton.swift */; };
 		6BA89B4E2ED526E3005428CC /* UColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA89B482ED526E3005428CC /* UColor.swift */; };
 		6BA89B4F2ED526E3005428CC /* UText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA89B492ED526E3005428CC /* UText.swift */; };
+		6BA89B642ED52795005428CC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA89B612ED52795005428CC /* ContentView.swift */; };
+		6BA89B652ED52795005428CC /* PlaygroundApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA89B622ED52795005428CC /* PlaygroundApp.swift */; };
+		6BA89B662ED52795005428CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BA89B602ED52795005428CC /* Assets.xcassets */; };
+		6BA89B672ED5285D005428CC /* UTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA89B4A2ED526E3005428CC /* UTextField.swift */; };
+		6BA89B682ED52863005428CC /* UText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA89B492ED526E3005428CC /* UText.swift */; };
+		6BA89B692ED52867005428CC /* UColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA89B482ED526E3005428CC /* UColor.swift */; };
+		6BA89B6A2ED5286C005428CC /* UButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA89B472ED526E3005428CC /* UButton.swift */; };
+		6BA89B6C2ED528B0005428CC /* CacheImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA89B6B2ED528A7005428CC /* CacheImage.swift */; };
+		6BA89B6D2ED528B0005428CC /* CacheImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA89B6B2ED528A7005428CC /* CacheImage.swift */; };
+		6BA89B6F2ED5296F005428CC /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA89B6E2ED5296D005428CC /* Alert.swift */; };
+		6BA89B702ED5296F005428CC /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA89B6E2ED5296D005428CC /* Alert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,10 +34,23 @@
 		6BA89B482ED526E3005428CC /* UColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UColor.swift; sourceTree = "<group>"; };
 		6BA89B492ED526E3005428CC /* UText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UText.swift; sourceTree = "<group>"; };
 		6BA89B4A2ED526E3005428CC /* UTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UTextField.swift; sourceTree = "<group>"; };
+		6BA89B552ED52789005428CC /* Playground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Playground.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BA89B602ED52795005428CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6BA89B612ED52795005428CC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		6BA89B622ED52795005428CC /* PlaygroundApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaygroundApp.swift; sourceTree = "<group>"; };
+		6BA89B6B2ED528A7005428CC /* CacheImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheImage.swift; sourceTree = "<group>"; };
+		6BA89B6E2ED5296D005428CC /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		6BA89B322ED5261B005428CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6BA89B522ED52789005428CC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -40,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				6BA89B432ED52625005428CC /* UstadiumDesignKit */,
+				6BA89B632ED52795005428CC /* Playground */,
 				6BA89B362ED5261B005428CC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				6BA89B352ED5261B005428CC /* UstadiumDesignKit.framework */,
+				6BA89B552ED52789005428CC /* Playground.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -65,12 +91,24 @@
 		6BA89B502ED526E8005428CC /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				6BA89B6E2ED5296D005428CC /* Alert.swift */,
+				6BA89B6B2ED528A7005428CC /* CacheImage.swift */,
 				6BA89B4A2ED526E3005428CC /* UTextField.swift */,
 				6BA89B492ED526E3005428CC /* UText.swift */,
 				6BA89B482ED526E3005428CC /* UColor.swift */,
 				6BA89B472ED526E3005428CC /* UButton.swift */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		6BA89B632ED52795005428CC /* Playground */ = {
+			isa = PBXGroup;
+			children = (
+				6BA89B602ED52795005428CC /* Assets.xcassets */,
+				6BA89B612ED52795005428CC /* ContentView.swift */,
+				6BA89B622ED52795005428CC /* PlaygroundApp.swift */,
+			);
+			path = Playground;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -106,6 +144,25 @@
 			productReference = 6BA89B352ED5261B005428CC /* UstadiumDesignKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		6BA89B542ED52789005428CC /* Playground */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6BA89B5D2ED5278B005428CC /* Build configuration list for PBXNativeTarget "Playground" */;
+			buildPhases = (
+				6BA89B512ED52789005428CC /* Sources */,
+				6BA89B522ED52789005428CC /* Frameworks */,
+				6BA89B532ED52789005428CC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Playground;
+			packageProductDependencies = (
+			);
+			productName = Playground;
+			productReference = 6BA89B552ED52789005428CC /* Playground.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -117,6 +174,9 @@
 				LastUpgradeCheck = 2610;
 				TargetAttributes = {
 					6BA89B342ED5261B005428CC = {
+						CreatedOnToolsVersion = 26.1;
+					};
+					6BA89B542ED52789005428CC = {
 						CreatedOnToolsVersion = 26.1;
 					};
 				};
@@ -136,6 +196,7 @@
 			projectRoot = "";
 			targets = (
 				6BA89B342ED5261B005428CC /* UstadiumDesignKit */,
+				6BA89B542ED52789005428CC /* Playground */,
 			);
 		};
 /* End PBXProject section */
@@ -149,6 +210,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6BA89B532ED52789005428CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BA89B662ED52795005428CC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -156,11 +225,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BA89B6D2ED528B0005428CC /* CacheImage.swift in Sources */,
 				6BA89B442ED52625005428CC /* UstadiumDesignKit.docc in Sources */,
 				6BA89B4C2ED526E3005428CC /* UTextField.swift in Sources */,
 				6BA89B4D2ED526E3005428CC /* UButton.swift in Sources */,
 				6BA89B4E2ED526E3005428CC /* UColor.swift in Sources */,
 				6BA89B4F2ED526E3005428CC /* UText.swift in Sources */,
+				6BA89B702ED5296F005428CC /* Alert.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6BA89B512ED52789005428CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BA89B682ED52863005428CC /* UText.swift in Sources */,
+				6BA89B672ED5285D005428CC /* UTextField.swift in Sources */,
+				6BA89B642ED52795005428CC /* ContentView.swift in Sources */,
+				6BA89B6C2ED528B0005428CC /* CacheImage.swift in Sources */,
+				6BA89B652ED52795005428CC /* PlaygroundApp.swift in Sources */,
+				6BA89B692ED52867005428CC /* UColor.swift in Sources */,
+				6BA89B6F2ED5296F005428CC /* Alert.swift in Sources */,
+				6BA89B6A2ED5286C005428CC /* UButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,6 +452,70 @@
 			};
 			name = Release;
 		};
+		6BA89B5E2ED5278B005428CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 28Y75BYDU7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ustadium.Playground;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6BA89B5F2ED5278B005428CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 28Y75BYDU7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ustadium.Playground;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -383,6 +533,15 @@
 			buildConfigurations = (
 				6BA89B3F2ED5261B005428CC /* Debug */,
 				6BA89B402ED5261B005428CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6BA89B5D2ED5278B005428CC /* Build configuration list for PBXNativeTarget "Playground" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6BA89B5E2ED5278B005428CC /* Debug */,
+				6BA89B5F2ED5278B005428CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

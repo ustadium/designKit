@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-enum UTextType {
+public enum UTextType {
     case body
     case title
     case componentTitle
@@ -35,7 +35,7 @@ enum UTextType {
     }
 }
 
-struct UText: View {
+public struct UText: View {
     let text: String
     var size: CGFloat = 16
     var weight: Font.Weight = .regular
@@ -54,7 +54,7 @@ struct UText: View {
         }
     }
 
-    init(_ text: String,
+    public init(_ text: String,
          size: CGFloat = 16,
          weight: Font.Weight = .regular, color: Color = .primary, allowsMarkdown: Bool = true) {
         self.text = text
@@ -64,11 +64,11 @@ struct UText: View {
         self.allowsMarkdown = allowsMarkdown
     }
     
-    init(_ text: String) {
+    public init(_ text: String) {
         self.text = text
     }
 
-    var body: some View {
+    public var body: some View {
         Group {
             if allowsMarkdown {
                 Text(.init(text))
@@ -82,23 +82,23 @@ struct UText: View {
 }
 
 extension UText {
-    func fontSize(_ newSize: CGFloat) -> UText {
+    public func fontSize(_ newSize: CGFloat) -> UText {
         UText(text, size: newSize, weight: weight, color: color, allowsMarkdown: allowsMarkdown)
     }
 
-    func fontWeight(_ newWeight: Font.Weight) -> UText {
+    public func fontWeight(_ newWeight: Font.Weight) -> UText {
         UText(text, size: size, weight: newWeight, color: color, allowsMarkdown: allowsMarkdown)
     }
 
-    func textColor(_ newColor: Color) -> UText {
+    public func textColor(_ newColor: Color) -> UText {
         UText(text, size: size, weight: weight, color: newColor, allowsMarkdown: allowsMarkdown)
     }
 
-    func markdownEnabled(_ enabled: Bool) -> UText {
+    public func markdownEnabled(_ enabled: Bool) -> UText {
         UText(text, size: size, weight: weight, color: color, allowsMarkdown: enabled)
     }
     
-    func textType(_ type: UTextType) -> UText {
+    public func textType(_ type: UTextType) -> UText {
         UText(text, size: type.size, weight: type.weight)
     }
 }

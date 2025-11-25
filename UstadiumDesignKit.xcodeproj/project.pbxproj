@@ -81,24 +81,16 @@
 		6BA89B432ED52625005428CC /* UstadiumDesignKit */ = {
 			isa = PBXGroup;
 			children = (
-				6BA89B502ED526E8005428CC /* UI */,
+				6BA89B472ED526E3005428CC /* UButton.swift */,
+				6BA89B482ED526E3005428CC /* UColor.swift */,
+				6BA89B492ED526E3005428CC /* UText.swift */,
+				6BA89B4A2ED526E3005428CC /* UTextField.swift */,
+				6BA89B6B2ED528A7005428CC /* CacheImage.swift */,
+				6BA89B6E2ED5296D005428CC /* Alert.swift */,
 				6BA89B412ED52625005428CC /* UstadiumDesignKit.docc */,
 				6BA89B462ED526E3005428CC /* Assets.xcassets */,
 			);
 			path = UstadiumDesignKit;
-			sourceTree = "<group>";
-		};
-		6BA89B502ED526E8005428CC /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				6BA89B6E2ED5296D005428CC /* Alert.swift */,
-				6BA89B6B2ED528A7005428CC /* CacheImage.swift */,
-				6BA89B4A2ED526E3005428CC /* UTextField.swift */,
-				6BA89B492ED526E3005428CC /* UText.swift */,
-				6BA89B482ED526E3005428CC /* UColor.swift */,
-				6BA89B472ED526E3005428CC /* UButton.swift */,
-			);
-			path = UI;
 			sourceTree = "<group>";
 		};
 		6BA89B632ED52795005428CC /* Playground */ = {

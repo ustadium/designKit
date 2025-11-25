@@ -21,7 +21,7 @@ This CocoaPods library will help our developers create faster, more consistent S
 
   spec.source       = { :git => "https://github.com/ustadium/designKit.git", :tag => "#{spec.version}" }
 
-  spec.source_files  = "UstadiumDesignKit/UI/**/*.swift"
+  spec.source_files  = "UstadiumDesignKit/**/*.swift"
 
 
 end

@@ -8,12 +8,22 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject private var navManager: NavigationManager
+    
     var body: some View {
-        VStack {
-            UText("Custom Text")
-                .fontSize(24)
+        List {
+            Button("Go to Text View") {
+                navManager.navigate(to: .text)
+            }
+            
+            Button("Go to Text input") {
+                navManager.navigate(to: .inputs)
+            }
+            
+            Button("Go to Alert") {
+                navManager.navigate(to: .alert)
+            }
         }
-        .padding()
     }
 }
 

@@ -85,7 +85,6 @@ public struct AsyncImageView: View {
     
     private func loadImage() {
         if let cachedImage: UIImage = ImageCache.shared.getImage(for: url) {
-            print("Fetched from cache")
             self.image = cachedImage
         } else {
             Task {

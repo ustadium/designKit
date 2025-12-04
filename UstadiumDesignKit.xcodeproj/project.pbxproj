@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B656A3B2EDA0773002DFC4E /* TextViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B656A3A2EDA0773002DFC4E /* TextViews.swift */; };
+		6B656A3D2EDA08ED002DFC4E /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B656A3C2EDA08ED002DFC4E /* TextFieldView.swift */; };
+		6B656A5C2EDE5ABB002DFC4E /* OTPInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B656A5B2EDE5AB3002DFC4E /* OTPInputView.swift */; };
+		6B656A5D2EDE5ABB002DFC4E /* OTPInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B656A5B2EDE5AB3002DFC4E /* OTPInputView.swift */; };
+		6B656A5F2EDE5C6B002DFC4E /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B656A5E2EDE5C6B002DFC4E /* AlertView.swift */; };
 		6BA89B442ED52625005428CC /* UstadiumDesignKit.docc in Sources */ = {isa = PBXBuildFile; fileRef = 6BA89B412ED52625005428CC /* UstadiumDesignKit.docc */; };
 		6BA89B4B2ED526E3005428CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BA89B462ED526E3005428CC /* Assets.xcassets */; };
 		6BA89B4C2ED526E3005428CC /* UTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA89B4A2ED526E3005428CC /* UTextField.swift */; };
@@ -27,6 +32,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6B656A3A2EDA0773002DFC4E /* TextViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViews.swift; sourceTree = "<group>"; };
+		6B656A3C2EDA08ED002DFC4E /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
+		6B656A5B2EDE5AB3002DFC4E /* OTPInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPInputView.swift; sourceTree = "<group>"; };
+		6B656A5E2EDE5C6B002DFC4E /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		6BA89B352ED5261B005428CC /* UstadiumDesignKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UstadiumDesignKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BA89B412ED52625005428CC /* UstadiumDesignKit.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = UstadiumDesignKit.docc; sourceTree = "<group>"; };
 		6BA89B462ED526E3005428CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -60,6 +69,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6B656A392EDA075A002DFC4E /* DestinationViews */ = {
+			isa = PBXGroup;
+			children = (
+				6B656A5E2EDE5C6B002DFC4E /* AlertView.swift */,
+				6B656A3A2EDA0773002DFC4E /* TextViews.swift */,
+				6B656A3C2EDA08ED002DFC4E /* TextFieldView.swift */,
+			);
+			path = DestinationViews;
+			sourceTree = "<group>";
+		};
 		6BA89B2B2ED5261B005428CC = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +100,7 @@
 		6BA89B432ED52625005428CC /* UstadiumDesignKit */ = {
 			isa = PBXGroup;
 			children = (
+				6B656A5B2EDE5AB3002DFC4E /* OTPInputView.swift */,
 				6BA89B472ED526E3005428CC /* UButton.swift */,
 				6BA89B482ED526E3005428CC /* UColor.swift */,
 				6BA89B492ED526E3005428CC /* UText.swift */,
@@ -96,6 +116,7 @@
 		6BA89B632ED52795005428CC /* Playground */ = {
 			isa = PBXGroup;
 			children = (
+				6B656A392EDA075A002DFC4E /* DestinationViews */,
 				6BA89B602ED52795005428CC /* Assets.xcassets */,
 				6BA89B612ED52795005428CC /* ContentView.swift */,
 				6BA89B622ED52795005428CC /* PlaygroundApp.swift */,
@@ -220,6 +241,7 @@
 				6BA89B6D2ED528B0005428CC /* CacheImage.swift in Sources */,
 				6BA89B442ED52625005428CC /* UstadiumDesignKit.docc in Sources */,
 				6BA89B4C2ED526E3005428CC /* UTextField.swift in Sources */,
+				6B656A5C2EDE5ABB002DFC4E /* OTPInputView.swift in Sources */,
 				6BA89B4D2ED526E3005428CC /* UButton.swift in Sources */,
 				6BA89B4E2ED526E3005428CC /* UColor.swift in Sources */,
 				6BA89B4F2ED526E3005428CC /* UText.swift in Sources */,
@@ -233,9 +255,13 @@
 			files = (
 				6BA89B682ED52863005428CC /* UText.swift in Sources */,
 				6BA89B672ED5285D005428CC /* UTextField.swift in Sources */,
+				6B656A3B2EDA0773002DFC4E /* TextViews.swift in Sources */,
 				6BA89B642ED52795005428CC /* ContentView.swift in Sources */,
 				6BA89B6C2ED528B0005428CC /* CacheImage.swift in Sources */,
+				6B656A5F2EDE5C6B002DFC4E /* AlertView.swift in Sources */,
 				6BA89B652ED52795005428CC /* PlaygroundApp.swift in Sources */,
+				6B656A5D2EDE5ABB002DFC4E /* OTPInputView.swift in Sources */,
+				6B656A3D2EDA08ED002DFC4E /* TextFieldView.swift in Sources */,
 				6BA89B692ED52867005428CC /* UColor.swift in Sources */,
 				6BA89B6F2ED5296F005428CC /* Alert.swift in Sources */,
 				6BA89B6A2ED5286C005428CC /* UButton.swift in Sources */,

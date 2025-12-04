@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct UColor {
+public extension Color {
+    static let textColor = Color("TextColor")
     static let primary = Color("PrimaryColor")
     static let secondary = Color("SecondaryColor")
-    static let background = Color("BackgroundColor")
 }

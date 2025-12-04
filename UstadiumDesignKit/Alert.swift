@@ -7,7 +7,55 @@
 
 import SwiftUI
 
-public struct BottomAlert: View {
+enum AlertPosition {
+    case top
+    case bottom
+}
+
+struct PositionAlertView<Content: View, AlertContent: View>: View {
+    @Binding var alert: AlertContent?
+    var position: AlertPosition = .bottom
+    let content: Content
+    
+    init(alert: Binding<AlertContent?>, @ViewBuilder content: () -> Content) {
+        self._alert = alert
+        self.content = content()
+    }
+    
+    var body: some View {
+        ZStack {
+            content
+            
+            VStack {
+                if position == .bottom {
+                    Spacer()
+                }
+                if let alert = alert {
+                    alert
+                        .transition(.move(edge: .bottom).combined(with: .opacity))
+                        .onAppear {
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                                withAnimation {
+                                    self.alert = nil
+                                }
+                            }
+                        }
+                }
+                
+                if position == .top {
+                    Spacer()
+                }
+            }
+            .padding(.bottom, 20)
+        }
+    }
+}
+
+public struct BottomAlert: View, Equatable {
+    public static func == (lhs: BottomAlert, rhs: BottomAlert) -> Bool {
+        lhs.message == rhs.message
+    }
+    
     var type: BottomAlertType
     
     public init(type: BottomAlertType) {
@@ -23,33 +71,25 @@ public struct BottomAlert: View {
     }
     
     public var body: some View {
-        HStack {
+        HStack(alignment: .center) {
             Image(systemName: image)
                 .resizable()
                 .frame(width: 20, height: 20)
                 .padding(.trailing, 8)
                 .padding(.leading, 20)
+            
             Text(message)
-                .font(.footnote)
+            
             Spacer()
         }
-        .frame(height: 60)
+        .frame(height: 50)
+        .background(
+            .ultraThinMaterial,
+            in: RoundedRectangle(cornerRadius: 16)
+        )
+        .shadow(color: Color.black.opacity(0.15), radius: 10)
         .padding(.horizontal, 20)
         .padding(.bottom, 20)
-        .background(
-            Rectangle()
-                .fill(BottomAlertConstants.alertColor)
-                .cornerRadius(8)
-                .shadow(
-                    color: Color.gray.opacity(0.7),
-                    radius: 8,
-                    x: 0,
-                    y: 0
-                )
-                .padding(.horizontal, 20)
-                .padding(.bottom, 20)
-        )
-        .backgroundStyle(BottomAlertConstants.alertColor)
     }
 }
 
@@ -80,7 +120,7 @@ public class BottomAlertConstants {
     static var successImage: String = "checkmark"
     static var failureImage: String = "xmark"
     
-    static var alertColor: Color = Color.init(uiColor: .systemBackground)
+    static var alertColor: Color = Color.init(uiColor: .systemBackground).opacity(0.9)
 }
 
 

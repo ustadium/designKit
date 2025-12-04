@@ -1,4 +1,4 @@
-# YourPodName
+# uSTADIUM Design Kit
 
 A lightweight Swift package that provides reusable UI components, including a customizable bottom alert view and an OTP input view. Designed for SwiftUI projects, this pod helps reduce repetitive code and speed up common UI workflows.
 

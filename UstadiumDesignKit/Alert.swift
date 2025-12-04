@@ -7,32 +7,34 @@
 
 import SwiftUI
 
-enum AlertPosition {
-    case top
-    case bottom
-}
 
 struct PositionAlertView<Content: View, AlertContent: View>: View {
     @Binding var alert: AlertContent?
-    var position: AlertPosition = .bottom
     let content: Content
     
-    init(alert: Binding<AlertContent?>, @ViewBuilder content: () -> Content) {
+    init(
+        alert: Binding<AlertContent?>,
+        position: Edge = .bottom,
+        @ViewBuilder content: () -> Content
+    ) {
         self._alert = alert
+        self.edge = position
         self.content = content()
     }
+    
+    private let edge: Edge
     
     var body: some View {
         ZStack {
             content
             
             VStack {
-                if position == .bottom {
+                if edge == .bottom {
                     Spacer()
                 }
                 if let alert = alert {
                     alert
-                        .transition(.move(edge: .bottom).combined(with: .opacity))
+                        .transition(.move(edge: edge).combined(with: .opacity))
                         .onAppear {
                             DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
                                 withAnimation {
@@ -42,7 +44,7 @@ struct PositionAlertView<Content: View, AlertContent: View>: View {
                         }
                 }
                 
-                if position == .top {
+                if edge == .top {
                     Spacer()
                 }
             }

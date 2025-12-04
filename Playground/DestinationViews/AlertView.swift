@@ -14,7 +14,7 @@ struct AlertView: View {
     @State var alert: BottomAlert?
     
     var body: some View {
-        BottomAlertView(alert: $alert) {
+        PositionAlertView(alert: $alert, position: .top) {
             VStack {
                 OTPInputView(code: $code)
                 

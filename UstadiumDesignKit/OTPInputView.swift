@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct OTPInputView: View {
+public struct OTPInputView: View {
     @Binding var code: String
     var length: Int = 6
     var isSecure: Bool = false
@@ -15,8 +15,22 @@ struct OTPInputView: View {
 
     @State private var internalText: String = ""
     @FocusState private var isFocused: Bool
+    
+    public init(
+        code: Binding<String>,
+        length: Int = 6,
+        isSecure: Bool = false,
+        onComplete: @escaping (String) -> Void,
+        internalText: String = ""
+    ) {
+        self._code = code
+        self.length = length
+        self.isSecure = isSecure
+        self.onComplete = onComplete
+        self.internalText = internalText
+     }
 
-    var body: some View {
+    public var body: some View {
         ZStack {
             // Hidden text field that receives input and supports autofill
             TextField("", text: $internalText)
@@ -47,7 +61,7 @@ struct OTPInputView: View {
 
                     ZStack {
                         RoundedRectangle(cornerRadius: 10)
-                            .fill(Color.textFieldBackground)
+                            .background(DesignTokens.Colors.textFieldBackground)
 
                         RoundedRectangle(cornerRadius: 10)
                             .stroke(

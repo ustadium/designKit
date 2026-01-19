@@ -7,17 +7,31 @@
 
 import SwiftUI
 
-enum UButtonType {
+public enum UButtonType {
     case regular
     case inverted
 }
 
-struct UButton: View {
+public struct UButton: View {
     var title: String
     var action: () -> Void
     var background: Color = Color.blue
     var cornerRadius: CGFloat = 14
     var type: UButtonType = .regular
+    
+    public init(
+        title: String,
+        action: @escaping () -> Void,
+        background: Color = DesignTokens.Colors.primary,
+        cornerRadius: CGFloat = 14,
+        type: UButtonType = .regular
+    ) {
+        self.title = title
+        self.action = action
+        self.background = background
+        self.cornerRadius = cornerRadius
+        self.type = type
+    }
     
     var backgroundColor: Color {
         switch type {
@@ -28,19 +42,20 @@ struct UButton: View {
     
     var textColor: Color {
         switch type {
-        case .regular: return .white
+        case .regular: return DesignTokens.Colors.textColor
         case .inverted: return background
         }
     }
     
-    var body: some View {
+    public var body: some View {
         Button(action: action) {
             Text(.init(title))
                 .font(.custom("HelveticaNeueMedium", size: 20))
                 .foregroundStyle(textColor)
-                .frame(height: 44)
+                .frame(height: 50)
                 .frame(maxWidth: .infinity)
         }
+        .frame(height: 50)
         .background(backgroundColor)
         .cornerRadius(cornerRadius)
         .overlay(
@@ -51,11 +66,11 @@ struct UButton: View {
 }
 
 extension UButton {
-    func background(color: Color) -> UButton {
+    public func background(color: Color) -> UButton {
         UButton(title: title, action: action, background: color)
     }
     
-    func buttonType(_ type: UButtonType) -> UButton {
+    public func buttonType(_ type: UButtonType) -> UButton {
         UButton(
             title: title,
             action: action,

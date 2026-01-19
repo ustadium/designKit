@@ -8,11 +8,11 @@
 import SwiftUI
 
 
-struct PositionAlertView<Content: View, AlertContent: View>: View {
+public struct PositionAlertView<Content: View, AlertContent: View>: View {
     @Binding var alert: AlertContent?
     let content: Content
     
-    init(
+    public init(
         alert: Binding<AlertContent?>,
         position: Edge = .bottom,
         @ViewBuilder content: () -> Content
@@ -24,7 +24,7 @@ struct PositionAlertView<Content: View, AlertContent: View>: View {
     
     private let edge: Edge
     
-    var body: some View {
+    public var body: some View {
         ZStack {
             content
             

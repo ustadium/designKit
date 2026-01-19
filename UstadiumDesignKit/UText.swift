@@ -39,7 +39,7 @@ public struct UText: View {
     let text: String
     var size: CGFloat = 16
     var weight: Font.Weight = .regular
-    var color: Color = Color.textColor
+    var color: Color = DesignTokens.Colors.textColor
     var allowsMarkdown: Bool = true
     
     // Map SwiftUI Font.Weight to HelveticaNeue names
@@ -56,7 +56,7 @@ public struct UText: View {
 
     public init(_ text: String,
          size: CGFloat = 16,
-         weight: Font.Weight = .regular, color: Color = .textColor, allowsMarkdown: Bool = true) {
+                weight: Font.Weight = .regular, color: Color = DesignTokens.Colors.textColor, allowsMarkdown: Bool = true) {
         self.text = text
         self.size = size
         self.weight = weight

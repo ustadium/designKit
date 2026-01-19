@@ -16,7 +16,7 @@ struct AlertView: View {
     var body: some View {
         PositionAlertView(alert: $alert, position: .top) {
             VStack {
-                OTPInputView(code: $code)
+                OTPInputView(code: $code) { _ in }
                 
                 Spacer()
                 

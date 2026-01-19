@@ -7,17 +7,22 @@
 
 import SwiftUI
 
-struct UTextField: View {
+public struct UTextField: View {
     
     @Binding var text: String
     var placeholder: String = ""
     
-    var body: some View {
+    public init(text: Binding<String>, placeholder: String = "") {
+        self._text = text
+        self.placeholder = placeholder
+    }
+    
+    public var body: some View {
         TextField(placeholder, text: $text)
             .padding(.leading, 6)
             .frame(maxWidth: .infinity)
             .frame(height: 50, alignment: .leading)
-            .background(Color.textFieldBackground)
+            .background(DesignTokens.Colors.textFieldBackground)
             .cornerRadius(12)
     }
 }

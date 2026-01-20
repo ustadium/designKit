@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "UstadiumDesignKit"
-  spec.version      = "0.0.3"  # Bump version since you're fixing it
+  spec.version      = "0.0.3"  
   spec.summary      = "A design kit for the Ustadium project providing reusable UI components."
   
   spec.description  = <<-DESC
